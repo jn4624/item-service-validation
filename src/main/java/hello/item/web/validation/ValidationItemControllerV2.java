@@ -142,7 +142,7 @@ public class ValidationItemControllerV2 {
 //            int resultPrice = item.getPrice() * item.getQuantity();
 //
 //            if (resultPrice < 10000) {
-//                bindingResult.addError(new ObjectError("item", new String[]{"total.price.min"}, new Object[]{10000, resultPrice}, null));
+//                bindingResult.addError(new ObjectError("item", new String[]{"totalPriceMin"}, new Object[]{10000, resultPrice}, null));
 //            }
 //        }
 //
@@ -185,7 +185,7 @@ public class ValidationItemControllerV2 {
             int resultPrice = item.getPrice() * item.getQuantity();
 
             if (resultPrice < 10000) {
-                bindingResult.reject("total", new Object[]{10000, resultPrice}, null);
+                bindingResult.reject("totalPriceMin", new Object[]{10000, resultPrice}, null);
             }
         }
 
